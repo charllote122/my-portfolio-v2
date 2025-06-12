@@ -1,19 +1,17 @@
 import { NavLink } from "react-router-dom";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
+import avatar from "../assets/avatar.png"; // <-- Correct import
 
 const Home = () => {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center px-4 text-center bg-gray-50 pt-24">
-
-            {/* Avatar */}
             <img
-                src="/avatar.png"
+                src={avatar}
                 alt="Charlotte"
                 className="w-32 h-32 rounded-full shadow-lg mb-6 object-cover"
             />
 
-            {/* Animated Heading */}
             <motion.h1
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -23,17 +21,14 @@ const Home = () => {
                 Hi, I'm Sofi
             </motion.h1>
 
-            {/* Bio */}
             <p className="mt-4 text-gray-600 text-lg max-w-xl">
                 A passionate frontend developer focused on creating clean, responsive, and user-friendly interfaces using React.js and Tailwind CSS.
             </p>
 
-            {/* Tech Tags */}
             <div className="mt-3 text-sm text-gray-500">
                 React.js | Tailwind CSS | JavaScript | UI/UX | Responsive Design
             </div>
 
-            {/* Call-to-Action Buttons */}
             <div className="mt-6 flex space-x-4">
                 <NavLink
                     to="/projects"
@@ -49,7 +44,6 @@ const Home = () => {
                 </NavLink>
             </div>
 
-            {/* Social Icons */}
             <div className="mt-6 flex space-x-4">
                 <a href="https://github.com/charllote122" target="_blank" rel="noopener noreferrer">
                     <Github className="w-6 h-6 text-gray-700 hover:text-black" />
@@ -58,7 +52,6 @@ const Home = () => {
                     <Linkedin className="w-6 h-6 text-gray-700 hover:text-blue-600" />
                 </a>
                 <a href="mailto:sofichemjor@gmail.com">
-
                     <Mail className="w-6 h-6 text-gray-700 hover:text-red-600" />
                 </a>
             </div>
